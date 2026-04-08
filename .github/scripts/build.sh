@@ -3,7 +3,7 @@
 export LANG=ru_RU.UTF-8
 
 pushd /etc/ImageMagick-* > /dev/null
-sudo sed -i -e s:'</policymap>':"  <policy domain="\""coder"\"" rights="\""read | write"\"" pattern="\""EPS"\"" />\n  <policy domain="\""coder"\"" rights="\""read | write"\"" pattern="\""PDF"\"" />\n</policymap>": policy.xml
+#sudo sed -i -e s:'</policymap>':"  <policy domain="\""coder"\"" rights="\""read | write"\"" pattern="\""EPS"\"" />\n  <policy domain="\""coder"\"" rights="\""read | write"\"" pattern="\""PDF"\"" />\n</policymap>": policy.xml
 popd > /dev/null
 
 find -iname '*.uml' -print0 | xargs --null -n 1 java -jar plantuml.jar

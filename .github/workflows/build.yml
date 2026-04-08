@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install LaTeX
-        run: sudo apt-get update && sudo apt-get install texlive-full cm-super default-jre imagemagick wget && wget -q -O plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2024.6/plantuml-1.2024.6.jar
+        run: sudo apt-get update && sudo apt-get install texlive-full cm-super default-jre imagemagick wget gnuplot ghostscript poppler-utils  graphviz && wget -q -O plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2024.6/plantuml-1.2024.6.jar
 
       - name: Compile LaTeX document
         run: ./.github/scripts/build.sh
