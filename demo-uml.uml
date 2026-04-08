@@ -1,4 +1,5 @@
 @startuml
+scale 5
 left to right direction
 
 actor "Юзер" as user
